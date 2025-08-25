@@ -2,10 +2,15 @@
   "$schema": "https://json.schemastore.org/package.json",
   "version": "0.1.22",
   "name": "cnpjota",
+  "description": "cnpjota é um servidor MCP e CLI que oferece suporte à mudança do formato do CNPJ brasileiro prevista para 2026, fornecendo funcionalidades de validação, geração e auditoria para formatos numéricos atuais e alfanuméricos futuros.",
+  "bugs": {
+    "url": "https://github.com/hermogenes/cnpjota/issues"
+  },
   "type": "module",
   "repository": {
     "url": "https://github.com/hermogenes/cnpjota"
   },
+  "license": "MIT",
   "private": false,
   "files": [
     "README.md",

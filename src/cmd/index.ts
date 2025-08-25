@@ -3,12 +3,12 @@ import {COMMAND_BANNER} from '../constants'
 import {mcpCommand} from './mcp'
 import {validateCommand} from './validate'
 import {generateCommand} from './generate'
-import {currentVersion} from '../version'
+import {getCurrentVersion} from '../version' with {type: 'macro'}
 import {promptsCommand} from './prompts'
 
 program
   .name('cnpjota')
-  .version(currentVersion)
+  .version(getCurrentVersion())
   .description('CLI for CNPJ alphanumeric compatibility')
   .addHelpText('beforeAll', COMMAND_BANNER)
 

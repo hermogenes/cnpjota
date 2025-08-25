@@ -8,12 +8,12 @@ import {
   ValidateCnpjResult,
   ValidateInput,
   GenerateInput,
-} from '../utils/cnpj.js'
-import {currentVersion} from '../version.js'
+} from '../utils/cnpj'
+import {getCurrentVersion} from '../version' with {type: 'macro'}
 
 const server = new McpServer({
   name: 'cnpjota-mcp',
-  version: currentVersion,
+  version: getCurrentVersion(),
 })
 
 server.registerPrompt(
