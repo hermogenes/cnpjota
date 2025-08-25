@@ -78,3 +78,7 @@ Attempt a first pass autonomously unless missing critical information; stop and 
 
 ## Stop Conditions
 - Deliver the report when all impacted points are listed. Request clarification if any points remain incomplete or ambiguous.
+
+## Generating CNPJs for testing
+
+In case you need valid CNPJs for tests, use the generate tool from cnpjota MCP

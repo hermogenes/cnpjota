@@ -31,8 +31,8 @@ server.registerPrompt(
 server.registerTool(
   'generate',
   {
-    title: 'Generate random valid CNPJ values',
-    description: 'Generate random valid CNPJ values',
+    title: 'Generate random valid alphanumeric CNPJ values for tests',
+    description: 'Generate random valid alphanumeric CNPJ values for tests',
     inputSchema: GenerateInput.shape,
     outputSchema: {
       result: GenerateCnpjResult,
