@@ -37,16 +37,16 @@ Use o comando de instalação automática para seu cliente MCP:
 
 ```bash
 # Claude Code
-npx cnpjota mcp install claude-code
+npx -y cnpjota mcp install claude-code
 
 # Cursor
-npx cnpjota mcp install cursor
+npx -y cnpjota mcp install cursor
 
 # VS Code
-npx cnpjota mcp install vscode
+npx -y cnpjota mcp install vscode
 
 # Gemini CLI
-npx cnpjota mcp install gemini-cli
+npx -y cnpjota mcp install gemini-cli
 ```
 
 O comando irá automaticamente configurar o servidor MCP no cliente especificado.
@@ -54,7 +54,7 @@ O comando irá automaticamente configurar o servidor MCP no cliente especificado
 ### Salvar prompt como arquivo (caso client não suporte prompts via MCP)
 
 ```bash
-npx cnpjota prompts export
+npx -y cnpjota prompts export
 ```
 
 ## 🚀 Uso em clients com suporte MCP
@@ -92,7 +92,7 @@ Caso seu cliente não suporte o uso de prompts via MCP, você pode utilizar salv
 Exemplo:
 
 ```bash
-npx cnpjota prompts export cnpj-audit-prompt.md
+npx -y cnpjota prompts export cnpj-audit-prompt.md
 ```
 **Prompt**
 
@@ -106,20 +106,20 @@ Utilize o prompt no arquivo cnpj-audit-prompt.md e verifique a compatilidade do 
 
 ```bash
 # Formato atual (14 dígitos)
-npx cnpjota validate 11222333000181
+npx -y cnpjota validate 11222333000181
 
 # Futuro formato alfanumérico
-npx cnpjota validate 0H.9WI.675/08G8-11
+npx -y cnpjota validate 0H.9WI.675/08G8-11
 ```
 
 #### Gerar CNPJ
 
 ```bash
 # Gerar CNPJ válido
-npx cnpjota generate
+npx -y cnpjota generate
 
 # Gerar múltiplos CNPJs
-npx cnpjota generate --count 5
+npx -y cnpjota generate --count 5
 ```
 
 ## 💻 Desenvolvimento

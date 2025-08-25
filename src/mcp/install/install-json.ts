@@ -1,5 +1,6 @@
 import type {MCPConfig} from './types'
 import fs from 'fs/promises'
+import {existsSync} from 'fs'
 
 export const createJsonMcpInstall = (
   filePath: string,
@@ -16,7 +17,7 @@ export const installMcpViaJsonFile = async (
   key: string = 'mcpServers',
   format?: (config: MCPConfig) => unknown,
 ) => {
-  const exists = await fs.exists(filePath)
+  const exists = existsSync(filePath)
   let configFile = {[key]: {} as Record<string, unknown>}
 
   if (!exists) {

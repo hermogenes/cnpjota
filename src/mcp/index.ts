@@ -1,14 +1,7 @@
 import {McpServer} from '@modelcontextprotocol/sdk/server/mcp.js'
 import {StdioServerTransport} from '@modelcontextprotocol/sdk/server/stdio.js'
 import {auditPrompt} from '../prompts'
-import {
-  generate,
-  validate,
-  GenerateCnpjResult,
-  ValidateCnpjResult,
-  ValidateInput,
-  GenerateInput,
-} from '../utils/cnpj'
+import {generate, validate, GenerateCnpjResult, ValidateCnpjResult, ValidateInput, GenerateInput} from '../utils/cnpj'
 import {getCurrentVersion} from '../version' with {type: 'macro'}
 
 const server = new McpServer({
