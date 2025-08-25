@@ -1,6 +1,7 @@
 import type {MCPConfig} from './types'
 import fs from 'fs/promises'
 import {existsSync} from 'fs'
+import path from 'path'
 
 export const createJsonMcpInstall = (
   filePath: string,
@@ -21,7 +22,7 @@ export const installMcpViaJsonFile = async (
   let configFile = {[key]: {} as Record<string, unknown>}
 
   if (!exists) {
-    await fs.mkdir(filePath, {recursive: true})
+    await fs.mkdir(path.dirname(filePath), {recursive: true})
   } else {
     const data = await fs.readFile(filePath, 'utf-8')
     configFile = JSON.parse(data)
