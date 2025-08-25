@@ -11,7 +11,7 @@ if (!newVersion) {
   newVersion = `${major}.${minor}.${patch + 1}`
 }
 
-json.version = newVersion
+json.version = newVersion.replace('v', '')
 
 await Bun.write('./package.json', JSON.stringify(json, null, 2))
 console.log(`Version bumped to ${json.version}`)
